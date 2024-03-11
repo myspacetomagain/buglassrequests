@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuglassRequests.com Request Form</title>
+</head>
+<body>
+    <h1>Buglass Request Form</h1>
+    <p>Please submit a request below. <br><br>You can select whether you're leaving a comment or a complaint prior to submission. <br><br>I will aim for all requests to be reviewed within 24 hours of submission.</p>
+    <form action="/feedback" method="post">
+    <form action="/feedback" method="post">
+        <label for="type">Request Type:</label>
+        <select name="type" id="type">
+            <option value="comment">Request</option>
+            <option value="complaint">Complaint</option>
+        </select><br><br>
+        
+        <label for="content">Message:</label><br>
+        <textarea id="content" name="content" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <img src="{{ url_for('static', filename='img/burger.gif') }}" alt="burger"/>
+    <!-- Audio player -->
+    <audio controls>
+        <source src="{{ url_for('static', filename='audio/rock.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+</body>
+</html>

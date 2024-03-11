@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you Bug</title>
+</head>
+<body>
+    <h1>Thank you for using BuglassRequests.com</h1>
+    <!-- Audio player -->
+    <audio controls>
+        <source src="{{ url_for('static', filename='audio/rock.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <p>Request submissions are limited to one per bug per day.<br><br>Please no ballot stuffing!</p>
+    </body>
+</html>

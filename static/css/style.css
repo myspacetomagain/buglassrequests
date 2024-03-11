@@ -1,0 +1,16 @@
+body {
+  background: black url("img/rock.gif");
+  text-align: center;
+}
+
+h1,
+p {
+  font-style: comic;
+  color: blueviolet;
+}
+
+h1 {
+  font-style: comic;
+  font-size: 4rem;
+  padding-top: 10rem;
+}

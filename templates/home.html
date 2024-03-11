@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuglassRequests.com</title>
+</head>
+<body>
+    <h1>Welcome to BuglassRequests.com</h1>
+    <form action="/feedback">
+        <input type="submit" value="Click Here" />
+    <!-- Audio player -->
+    <audio controls>
+        <source src="{{ url_for('static', filename='audio/rock.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <img src="{{ url_for('static', filename='img/sonic.gif') }}" alt="sonic"/>
+    <img src="{{ url_for('static', filename='img/prof.gif') }}" alt="prof"/>
+    <img src="{{ url_for('static', filename='img/rock.gif') }}" alt="rock"/>    
+    </form>
+</body>
+</html>
