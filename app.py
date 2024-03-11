@@ -6,7 +6,7 @@ DATABASE = 'database.db'
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
-    conn.row_factory = sqlite3.Row  # This enables column access by name: row['column_name']
+    conn.row_factory = sqlite3.Row  
     return conn
 
 
@@ -44,7 +44,8 @@ def feedback():
         feedback_type = request.form['type']
         content = request.form['content']
         conn = get_db_connection()
-        conn.execute('INSERT INTO feedback (type, content) VALUES (?, ?)', (feedback_type, content))
+        conn.execute('INSERT INTO feedback (type, content) VALUES (?, ?)',
+                     (feedback_type, content))
         conn.commit()
         conn.close()
         return redirect('/thankyou')
