@@ -6,7 +6,7 @@ DATABASE = 'database.db'
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
-    conn.row_factory = sqlite3.Row  
+    conn.row_factory = sqlite3.Row
     return conn
 
 
@@ -76,4 +76,4 @@ def drop_feedback_table():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    app.run(debug=False)
